@@ -1,0 +1,175 @@
+<mjml>
+  <mj-body background-color="#ffffff" font-size="13px">
+    <mj-section>
+      <mj-column vertical-align="top" width="100%">
+        <mj-image
+          src="/assets.images/rcg-logo.svg"
+          alt=""
+          align="center"
+          border="none"
+          width="100px"
+          padding-left="0px"
+          padding-right="0px"
+          padding-bottom="0px"
+          padding-top="0"
+        ></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section
+      background-color="#9e2b25"
+      vertical-align="top"
+      padding-bottom="0px"
+      padding-top="0"
+    >
+      <mj-column vertical-align="top" width="100%">
+        <mj-text
+          align="left"
+          color="#ffffff"
+          font-size="20px"
+          font-weight="bold"
+          font-family="open Sans Helvetica, Arial, sans-serif"
+          padding-left="20px"
+          padding-right="15px"
+          padding-bottom="15px"
+          padding-top="15px"
+          >Request for Quotation</mj-text
+        >
+      </mj-column>
+      <mj-divider border-color="#F5F8DE"></mj-divider>
+    </mj-section>
+
+    <mj-section
+      background-color="#9e2b25"
+      padding-bottom="20px"
+      padding-top="20px"
+    >
+      <mj-column vertical-align="middle" width="100%">
+        <mj-text
+          align="left"
+          color="#ffffff"
+          font-size="22px"
+          font-family="open Sans Helvetica, Arial, sans-serif"
+          padding-left="25px"
+          padding-right="25px"
+          ><span style="color: #feeb35">Hi ${customerName},</span><br
+        /></mj-text>
+        <mj-text
+          align="left"
+          color="#ffffff"
+          font-size="15px"
+          font-family="open Sans Helvetica, Arial, sans-serif"
+          padding-left="25px"
+          padding-right="25px"
+          >Thank you for your interest to request for quotation for the ff.
+          details:</mj-text
+        >
+        <mj-section
+          background-color="#9e2b25"
+          padding-bottom="0px"
+          padding-top="0"
+        >
+          <mj-column vertical-align="top" width="25%">
+            <mj-text
+              align="left"
+              color="#ffffff"
+              font-size="16px"
+              font-family="open Sans Helvetica, Arial, sans-serif"
+              >ProductName</mj-text
+            >
+          </mj-column>
+          <mj-column vertical-align="top" width="50%">
+            <mj-text
+              align="left"
+              color="#ffffff"
+              font-size="16px"
+              font-family="open Sans Helvetica, Arial, sans-serif"
+              >${productName}</mj-text
+            >
+          </mj-column>
+        </mj-section>
+        <mj-section
+          background-color="#9e2b25"
+          padding-bottom="0px"
+          padding-top="0"
+        >
+          <mj-column vertical-align="top" width="25%">
+            <mj-text
+              align="left"
+              color="#ffffff"
+              font-size="16px"
+              font-family="open Sans Helvetica, Arial, sans-serif"
+              >Qty</mj-text
+            >
+          </mj-column>
+          <mj-column vertical-align="top" width="50%">
+            <mj-text
+              align="left"
+              color="#ffffff"
+              font-size="16px"
+              font-family="open Sans Helvetica, Arial, sans-serif"
+              >${qty}</mj-text
+            >
+          </mj-column>
+        </mj-section>
+        <mj-section
+          background-color="#9e2b25"
+          padding-bottom="0px"
+          padding-top="0"
+        >
+          <mj-column vertical-align="top" width="25%">
+            <mj-text
+              align="left"
+              color="#ffffff"
+              font-size="16px"
+              font-family="open Sans Helvetica, Arial, sans-serif"
+              >Due Date</mj-text
+            >
+          </mj-column>
+          <mj-column vertical-align="top" width="50%">
+            <mj-text
+              align="left"
+              color="#ffffff"
+              font-size="16px"
+              font-family="open Sans Helvetica, Arial, sans-serif"
+              >${dueDate}</mj-text
+            >
+          </mj-column>
+        </mj-section>
+        <mj-section>
+          <mj-column align="left" vertical-align="top" width="25%">
+            <mj-text
+              align="left"
+              color="#ffffff"
+              font-size="16px"
+              font-family="open Sans Helvetica, Arial, sans-serif"
+              >Description</mj-text
+            >
+          </mj-column>
+          <mj-column align="left" vertical-align="top" width="50%">
+            <mj-text
+              align="left"
+              color="#ffffff"
+              font-size="16px"
+              font-family="open Sans Helvetica, Arial, sans-serif"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit e${description}</mj-text
+            >
+          </mj-column>
+        </mj-section>
+        <mj-text
+          align="left"
+          color="#ffffff"
+          font-size="15px"
+          font-family="open Sans Helvetica, Arial, sans-serif"
+          padding-left="25px"
+          padding-right="25px"
+          >Thanks, <br />
+          RCG Engraving Services Team</mj-text
+        >
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
