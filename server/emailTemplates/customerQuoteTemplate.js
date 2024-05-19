@@ -1,3 +1,10 @@
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+import fs from "node:fs";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const output = ({
   productName = "",
   qty = 0,
@@ -6,6 +13,17 @@ const output = ({
   description = "",
   dueDate = "",
 }) => {
+  let logo;
+  try {
+    const imageData = fs.readFileSync(
+      __dirname + "/public/images/assets/rcg-logo.svg",
+      "binary"
+    );
+    if (imageData) {
+      logo = imageData;
+    }
+  } catch (error) {}
+
   return `<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
@@ -136,7 +154,7 @@ const output = ({
                           <tbody>
                             <tr>
                               <td style="width:100px;">
-                                <img alt="" height="auto" src="/assets.images/rcg-logo.svg" style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="100" />
+                                <img alt="" height="auto" src="${logo}" style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="100" />
                               </td>
                             </tr>
                           </tbody>
@@ -226,7 +244,7 @@ const output = ({
                                       <tbody>
                                         <tr>
                                           <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                                            <div style="font-family:open Sans Helvetica, Arial, sans-serif;font-size:16px;line-height:1;text-align:left;color:#ffffff;">${productName}</div>
+                                            <div style="font-family:open Sans Helvetica, Arial, sans-serif;font-size:16px;line-height:1;text-align:left;color:#ffffff;">${productName}${logo}</div>
                                           </td>
                                         </tr>
                                       </tbody>

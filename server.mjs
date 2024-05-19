@@ -2,9 +2,9 @@ import express from "express";
 import dotenv from "dotenv";
 import customerRequests from "./server/routes/customerRequestsRoutes.js";
 import cors from "cors";
-import path from "path";
+import path, { dirname } from "path";
 import { fileURLToPath } from "url";
-import { log } from "console";
+import fs from "node:fs";
 
 dotenv.config();
 
@@ -23,11 +23,18 @@ app.use(express.json({ limit: "50mb" }));
 app.use(
   express.urlencoded({ limit: "50mb", extended: true, parameterLimit: 20 })
 );
+app.use("/static", express.static("public"));
 
-// const __dirname = process.env.BASE_URL;
-// console.log(__dirname);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
-// app.use(express.static(__dirname + "/public/"));
+// try {
+//   const imageData = fs.readFileSync(
+//     __dirname + "/public/images/assets/rcg-logo.svg",
+//     "binary"
+//   );
+//   if (imageData) console.log(imageData);
+// } catch (error) {}
 
 app.get("/api", (req, res) => {
   res.send("API running");

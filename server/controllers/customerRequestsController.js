@@ -29,10 +29,9 @@ const reqQuote = expressAsync(async (req, res) => {
 
     console.log(req.body);
 
-    const recipients = [emailAddress, CONTACT_INFO.emailAddress];
+    // const recipients = [emailAddress, CONTACT_INFO.emailAddress];
+    const recipients = [emailAddress];
     let resultMsg = [];
-
-    console.log(recipients);
 
     const emailPromise = recipients.map((recipient) => {
       return sendEmail(recipient, mailSubject, mailContent, reqFile)

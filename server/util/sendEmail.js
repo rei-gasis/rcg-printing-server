@@ -15,17 +15,20 @@ function sendEmail(email, subject, content, attachments, bcc) {
       },
     });
 
+    const mailAttach = attachments?.originalname
+      ? {
+          filename: attachments?.originalname,
+          path: attachments?.path,
+        }
+      : [];
+
     let from = `${process.env.COMPANY_NAME} <${process.env.MAIL_CONFIGS_EMAIL}>`;
     const mailConfigs = {
       from: from,
       to: email,
       subject: subject,
       html: content,
-      attachments: attachments,
-      // {
-      //   filename: attachments?.originalname || "",
-      //   path: attachments?.path || "",
-      // },
+      attachments: mailAttach,
       bcc: bcc,
     };
 
